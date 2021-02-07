@@ -1,12 +1,14 @@
 #ifndef RUNTIME_H
 #define RUNTIME_H
 
+#include <stdint.h>
+
 typedef struct {
 	uint8_t tag; // data type
 	union {
 		int64_t value_int;
 		char* value_str;
-	}
+	};
 } vm_constant_t;
 
 typedef struct {

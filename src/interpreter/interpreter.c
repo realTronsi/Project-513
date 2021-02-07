@@ -6,8 +6,8 @@ int bc_fetch(VM_RUNTIME* vmrt) {
 
 int bc_eval(int instruction){
 	switch(instruction){
-		case IS_CONST: {
-			break;
+		case IS_HALT: {
+			break; //placeholder
 		}
 		default: break;
 	}
