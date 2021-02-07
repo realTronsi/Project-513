@@ -2,13 +2,26 @@
 #define RUNTIME_H
 
 typedef struct {
+	uint8_t tag; // data type
+	union {
+		int64_t value_int;
+		char* value_str;
+	}
+} vm_constant_t;
+
+typedef struct {
+	uint64_t count;
+	vm_constant_t* constants;
+} VM_DATA;
+
+typedef struct {
 	char* program; // bytecode program
 	unsigned long int ip; // instruction pointer
-	void* const_pool; // constant pool
+	VM_DATA vm_data;
 } VM_RUNTIME;
 
 enum {
-	IS_CONST = 0
+	IS_HALT = 0 // halt program
 } Instruction_Set;
 
 #endif
