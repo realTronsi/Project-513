@@ -12,7 +12,7 @@ typedef struct {
 } vm_constant_t;
 
 typedef struct {
-	uint64_t count;
+	uint64_t const_count;
 	vm_constant_t* constants;
 } VM_DATA;
 
@@ -24,6 +24,7 @@ typedef struct {
 
 enum {
 	IS_HALT = 0 // halt program
+	
 } Instruction_Set;
 
 #endif
