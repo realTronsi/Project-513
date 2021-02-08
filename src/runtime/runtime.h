@@ -23,8 +23,8 @@ typedef struct {
 } VM_RUNTIME;
 
 enum {
-	IS_HALT = 0 // halt program
-	
+	IS_HALT = 0, // halt program
+	IS_CONST // constant data pool
 } Instruction_Set;
 
 #endif
