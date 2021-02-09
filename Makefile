@@ -10,11 +10,10 @@ SRC4 = $(wildcard src/runtime/*.c)
 
 all:
 	$(CC) $(CFLAGS) $(SRC1) $(SRC2) $(SRC3) $(SRC4) -o $(TARGET)
+	
 debug:
 
 	$(CC) $(CFLAGS) -g -D DEBUG=1 $(SRC1) $(SRC2) $(SRC3) $(SRC4) -o $(TARGET)
-
-
 
 clean:
 	rm -rf $(TARGET)

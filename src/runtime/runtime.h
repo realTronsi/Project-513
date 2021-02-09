@@ -18,6 +18,7 @@ typedef struct {
 
 typedef struct {
 	char* program; // bytecode program
+	size_t program_len; // length of program
 	unsigned long int ip; // instruction pointer
 	VM_DATA vm_data;
 } VM_RUNTIME;

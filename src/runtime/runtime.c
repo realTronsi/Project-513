@@ -1,5 +1,9 @@
 #include "runtime.h"
 
+VM_DATA* add_const(uint8_t type_tag){
+	//placeholder
+}
+
 VM_DATA* init_vm_data(){
 	VM_DATA* new_vm_data = calloc(1, sizeof(*new_vm_data));
 	new_vm_data -> const_count = 0;
